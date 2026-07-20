@@ -31,8 +31,7 @@ String[] categories = {"\t\t\t\t\tCHIPS", "\t\t\t\t\tHYGIENE", "\t\t\t\t\t CANNE
                 {25, 25, 25, 35, 15},
                 {12, 10, 9, 13, 10}
         };
-        // Default stocks - will be used when stocks.txt can't be found
-        // shit wont work kapag wala rin, failsafe lang to
+        // Default stocks - will use these values for stocks.txt if it's missing
         int[][] stocks = {
                 {20, 20, 20, 20, 20},
                 {15, 15, 15, 15, 15},
@@ -164,7 +163,8 @@ String[] categories = {"\t\t\t\t\tCHIPS", "\t\t\t\t\tHYGIENE", "\t\t\t\t\t CANNE
                     }
                 }
             }
-            // halos wala rin instance na mangyayari to, failsafe lng tlga ->>
+            // halos wala rin instance na mangyayari to, failsafe lng tlga
+            // what originally happens is kukunin niya yung values sa stocks and gagawa siya ng bagong stocks.txt -->>
         } catch (FileNotFoundException e) {
             System.out.println("Stocks file [stocks.txt] not found. Using default stocks instead.");
         }
